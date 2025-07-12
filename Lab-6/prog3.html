@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onkeypress="on_key_press()"> on key press</button>
+
+    <button onkeydown="on_key_down()">on key down</button>
+
+    <button onkeyup="on_key_up()">on key up</button>
+
+    <script>
+        function on_key_press(){
+            alert("on key press");
+        }
+
+        function on_key_down(){
+            alert("on key down");
+        }
+
+        function on_key_up(){
+            alert("on key up");
+        }
+    </script>
+</body>
+</html>

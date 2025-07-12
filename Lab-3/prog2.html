@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let n=parseInt(prompt("Enter the number of elements:"));
+        let  a=[];
+        for(let i=0;i<n;i++){
+            a.push(prompt("Enter element:"));
+        }
+        document.write("Array:"+a);
+        document.write('<br>');
+        document.write("Ascending Order:"+a.sort());
+        document.write('<br>');
+        document.write("Descending Order:"+a.sort((a,b)=>b-a));
+    </script>
+</body>
+</html>

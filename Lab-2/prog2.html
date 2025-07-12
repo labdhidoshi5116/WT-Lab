@@ -1,0 +1,49 @@
+<!-- prog 3 
+1.  *
+    **
+    ***
+    ****
+    *****(in center)
+2.  *
+    **
+    ***
+    ****
+    *****(on right)
+3.  1
+    2 3
+    4 5 6
+    7 8 9 10
+    11 12 13 14 15(on left)
+4.  1 2 3 4 5 
+    1 2 3 4 
+    1 2 3 
+    1 2 
+    1  (on left)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const st=parseInt(prompt("Enter starting number:"));
+        const en=parseInt(prompt("Enter ending number:"));
+        let i=2,flag=0;
+        for(let n=st;n<=en;n++){
+            while(i<n){
+                if(n%i==0){
+                    flag=1;
+                    break;
+                }
+                i++;
+                flag=0;
+            }i=2;
+            if(flag==0){
+                document.write(n+",");
+            }
+        }
+    </script>
+</body>
+</html>

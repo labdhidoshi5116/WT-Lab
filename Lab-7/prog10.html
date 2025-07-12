@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.onmousedown= function (event){
+            if(event.button===0){
+                document.write("Left Clicked");
+            }
+            else if(event.button===2){
+                document.write("Right Clicked");
+            }
+        };
+        document.oncontextmenu=function (e){
+            return false;
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const a=parseInt(prompt("Enter a number:"));
+        let oriNum=a,rem,res;
+        while(oriNum!=0){
+            rem=oriNum%10;
+            res +=rem*rem*rem;
+            oriNum/=10;
+        }
+        if(res==a){
+            document.write("Is Armstrong");
+        }
+        else{
+            document.write("Isn't Armstrong");
+        }
+    </script>
+</body>
+</html>

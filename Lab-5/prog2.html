@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form_login">
+        <input type="text" id="uname" name="uname" placeholder="Enter Username">
+        <input type="password" id="pass" name="pass" placeholder="Enter Password">
+        <button type="button" onclick="func()">Submit</button>
+    </form>
+    <script type="text/javascript">
+        // function func()
+        // {
+        //     var a=document.forms["form_login"];
+        //     var u=a.uname.value; //refEle.nameOfTag.value
+        //     var p=a.pass.value;
+        //     if(u=="Admin" && p=="0000"){
+        //         alert("Login Successful");
+        //     }
+        //     else{
+        //         alert("Username or Password incorrect")
+        //     }
+        // }
+        function func(){
+            var a=document.getElementById("uname");
+            var b=document.getElementById("pass");
+            if(a.value==="Admin" && b.value==="0000"){
+                alert("Login Successful");
+            }
+            else{
+                alert("Username or Password incorrect")
+            } 
+        }
+    </script>
+</body>
+</html>

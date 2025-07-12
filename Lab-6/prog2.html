@@ -1,0 +1,59 @@
+<!--onclick
+ondbclick
+onmousedown
+onmousemove
+onmouseover
+onmouseout
+onmouseup -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clk()">On Click</button>
+    <br>
+    <br>
+    <button ondblclick="dbclk()">Double click</button>
+    <br>
+    <br>
+    <button onmouseout="outclk()">On Out</button>
+    <br>
+    <br>
+    <button onmousedown="downclk()">On Down</button>
+    <br>
+    <br>
+    <button onmousemove="moveclk()">On Move</button>
+    <br>
+    <br>
+    <button onmouseover="overclk()">On Over</button>
+    <br>
+    <br>
+    <button onmouseup="upclk()">On Up</button>
+    <script>
+        function clk(){
+            alert("button clicked");
+        }
+        function dbclk(){
+            alert("button clicked twice");
+        }
+        function outclk(){
+            alert("button out");
+        }
+        function downclk(){
+            alert("button down");
+        }
+        function moveclk(){
+            alert("button moved");
+        }
+        function overclk(){
+            alert("button over");
+        }
+        function upclk(){
+            alert("button up");
+        }
+    </script>
+</body>
+</html>

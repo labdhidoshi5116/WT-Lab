@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table border="1" style="text-align: center;">
+    <tr>
+        <td colspan="4" style="height: 30px;"><input type="text" id="result"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button onclick="ac()">AC</button></td>
+        <td><button onclick="display('%')">%</button></td>
+        <td><button onclick="display('/')">/</button></td>
+    </tr>
+    <tr>
+        <td><button value="7" onclick="display('7')">7</button></td>
+        <td><button value="8" onclick="display('8')">8</button></td> 
+        <td><button value="9" onclick="display('9')">9</button></td>
+        <td><button onclick="display('*')">*</button></td>
+    </tr>
+    <tr>
+        <td><button value="4" onclick="display('4')">4</button></td>
+        <td><button value="5" onclick="display('5')">5</button></td>
+        <td><button value="6" onclick="display('6')">6</button></td>
+        <td><button onclick="display('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button value="1" onclick="display('1')">1</button></td>
+        <td><button value="2" onclick="display('2')">2</button></td>
+        <td><button value="3" onclick="display('3')">3</button></td>
+        <td><button onclick="display('+')">+</button></td>
+    </tr>
+    <tr>
+        <td colspan="2" value="0" onclick="display('0')"><button>0</button></td>
+        <td><button value="." onclick="display('.')">.</button></td>
+        <td><button onclick="equal()" style="background-color: orange; color: white;">=</button></td>
+    </tr>
+</table>
+    <script type="text/javascript">
+        function display(value){
+            a=document.getElementById("result");
+            a.value+=value;
+        }
+        function ac(){
+            a=document.getElementById("result");
+            a.value="";
+        }
+        function equal(final){
+            a=document.getElementById("result");
+            final=eval(a.value);
+            a.value=final;
+        }
+    </script>
+</body>
+</html>

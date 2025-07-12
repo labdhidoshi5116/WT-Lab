@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student_data = [
+        {
+            "dob": "1978-10-29T21:54:30.456Z",
+            "firstname": "Onie",
+            "lastname": "Welch",
+            "id": "1"
+        },
+        {
+            "dob": "2005-08-27T14:23:32.600Z",
+            "firstname": "Buford",
+            "lastname": "O'Reilly",
+            "id": "2"
+        },
+        {
+            "dob": "1990-01-01T00:00:00.000Z",
+            "firstname": "Moriah",
+            "lastname": "Hodkiewicz",
+            "id": "3"
+        },
+        {
+            "dob": "1985-05-15T12:30:45.123Z",
+            "firstname": "Lura",
+            "lastname": "Kulas",
+            "id": "4"
+        },
+        {
+            "dob": "1992-07-20T09:15:30.456Z",
+            "firstname": "Domenic",
+            "lastname": "Bashirian",
+            "id": "5"
+        },
+        {
+            "dob": "1988-11-11T18:45:00.789Z",
+            "firstname": "Lavinia",
+            "lastname": "Koepp",
+            "id": "6"
+        },
+        {
+            "dob": "1975-03-03T06:30:15.789Z",
+            "firstname": "Eldridge",
+            "lastname": "Schamberger",
+            "id": "7"
+        },
+        {
+            "dob": "1995-09-09T21:00:00.000Z",
+            "firstname": "Cecilia",
+            "lastname": "Kulas",
+            "id": "8"
+        },
+        {
+            "dob": "1968-01-11T00:01:38.405Z",
+            "firstname": "Ward",
+            "lastname": "Hayes",
+            "id": "9"
+        },
+        {
+            "dob": "1964-01-01T06:18:48.865Z",
+            "firstname": "Orpha",
+            "lastname": "Runolfsson",
+            "id": "10"
+        }
+
+        ]
+
+        //display
+        for(student of student_data) {
+            document.write("ID: " + student.id + ", Name: " + student.firstname + " " + student.lastname + ", Date of Birth: " + new Date(student.dob).toLocaleDateString() + "<br>");
+        }
+
+        //push
+        student_data.push({
+            "dob": "1999-12-31T23:59:59.999Z",
+            "firstname": "New",
+            "lastname": "Student",
+            "id": "11"
+        });
+
+        document.write("<br>After (push) adding a new student:<br>");
+        for(student of student_data) {
+            document.write("ID: " + student.id + ", Name: " + student.firstname + " " + student.lastname + ", Date of Birth: " + new Date(student.dob).toLocaleDateString() + "<br>");
+        }
+
+        //pop
+        student_data.pop();
+        document.write("<br>After (pop) adding a new student:<br>");
+        for(student of student_data) {
+            document.write("ID: " + student.id + ", Name: " + student.firstname + " " + student.lastname + ", Date of Birth: " + new Date(student.dob).toLocaleDateString() + "<br>");
+        }
+
+        //shift
+        student_data.shift();
+        document.write("<br>After (shift) adding a new student:<br>");
+        for(student of student_data) {
+            document.write("ID: " + student.id + ", Name: " + student.firstname + " " + student.lastname + ", Date of Birth: " + new Date(student.dob).toLocaleDateString() + "<br>");
+        }
+
+        //unshift
+        student_data.unshift({
+            "dob": "2000-01-01T00:00:00.000Z",
+            "firstname": "First",
+            "lastname": "Student",
+            "id": "0"
+        });
+
+        document.write("<br>After (unshift) adding a new student:<br>");
+        for(student of student_data) {
+            document.write("ID: " + student.id + ", Name: " + student.firstname + " " + student.lastname + ", Date of Birth: " + new Date(student.dob).toLocaleDateString() + "<br>");
+        }
+
+        //splice
+        student_data.splice(2, 1, {
+            "dob": "1993-03-03T00:00:00.000Z",
+            "firstname": "Updated",
+            "lastname": "Student",
+            "id": "3"
+        });
+        document.write("<br>After (splice) adding a new student:<br>");
+        for(student of student_data) {
+            document.write("ID: " + student.id + ", Name: " + student.firstname + " " + student.lastname + ", Date of Birth: " + new Date(student.dob).toLocaleDateString() + "<br>");
+        }
+
+        //sort
+        student_data.sort(firstname);
+        document.write("<br>After (sort) adding a new student:<br>");
+        for(student of student_data) {
+            document.write("ID: " + student.id + ", Name: " + student.firstname + " " + student.lastname + ", Date of Birth: " + new Date(student.dob).toLocaleDateString() + "<br>");
+        }
+</script>
+</body>
+</html>

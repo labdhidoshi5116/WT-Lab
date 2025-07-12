@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let n=parseInt(prompt("Enter the number of elements:"));
+        let  a=[];
+        for(let i=0;i<n;i++){
+            a.push(prompt("Enter element:"));
+        }
+        max=a[0];
+        for(let i=0;i<a.length;i++){
+            if(a[i]>max){
+                max=a[i];
+            }
+        }
+        document.write("Array:"+a);
+        document.write('<br>');
+        document.write("Maximum:"+max);
+        
+
+
+        
+    </script>
+</body>
+</html>

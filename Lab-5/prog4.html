@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="validate(event)">
+        <label>User Name:</label>
+        <input type="text" placeholder="Enter Username" name="uname" id="uname">
+        <br><br>
+        <label>Password:</label>
+        <input type="password" id="pass" name="pass" placeholder="Enter Password">
+        <br><br>
+        <label>Re-enter Password:</label>
+        <input type="password" id="repass" name="repass" placeholder="Re-enter Password">
+        <br><br>
+        <label>Age:</label>
+        <input type="text" id="age" name="age" placeholder="Enter Age">
+        <br><br>
+        <label>Enrollment Number:</label>
+        <input type="text" id="enroll" name="enroll" placeholder="Enter Enrollment Number">
+        <br><br>
+        <label>Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter Email">
+        <br><br>
+        <button>Submit</button>
+    </form>
+    <script>
+        function validate(event)
+        {
+            event.preventDefault();
+            // for username
+            var uname=document.getElementById("uname");
+            pat1='^[a-zA-Z_.]{8,}$';
+            reg1=new RegExp(pat1);
+            if(!reg1.test(uname.value)){
+                alert("Invalid Username")
+            }
+            // for password
+            var pass=document.getElementById("pass").value;
+            pat2='^(?=.\d)(?=.[!@#$%^&])[A-Za-z\d!@#$%^&]{8,12}$';
+            reg2=new RegExp(pat2);
+            if(!reg2.test(pass)){
+                alert("Invalid Password");
+            }
+            // for repeat password
+            var repass=document.getElementById("repass").value;
+            if(!reg2.test(repass)||pass!=repass){
+                alert("Invalid Repeat Password");
+            }
+            // for age
+            // if(!)
+            // for enrollment number
+            // for email
+        }
+        // * 0 or more
+        // + 1 or more 
+        // ? 0 or 1
+        // ^[0-9]{11}$
+    </script>
+</body>
+</html>
