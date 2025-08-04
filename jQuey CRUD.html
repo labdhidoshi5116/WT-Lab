@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script>
+        faculty=[
+            {name:"Swati Sharma", contact:"9727747317",imageAdd:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/11---29-04-2023-01-44-21.jpg"},
+            {name:"Dixita Kagathara", contact:"9727747317",imageAdd:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/9---28-04-2023-02-06-37.jpg"},
+            {name:"Shruti Maniar", contact:"9727747310",imageAdd:"https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/336---28-04-2023-01-34-37.jpg"},
+        ];
+        $(document).ready(function(){
+            display();
+            $("addStudent").click(function(){
+                let name=$("txtName").val();
+                let contact=$("txtCont").val();
+                let imageAdd=$("txtImageAdd").val();
+
+                let data={name,contact,imageAdd};
+                faculty.push(data);
+                display();
+            })
+        });
+        function display(){
+            let formatedData=faculty.map((s)=>{
+                let temp="<tr>";
+                temp+="<td>"+f.name+"</td>";
+                temp+="<td>"+f.conatct+"</td>";
+                temp+="<td><img width='50px' src='"+f.imageAdd+"'/></td>";
+                
+            })
+        }
+    </script>
+</body>
+</html>
