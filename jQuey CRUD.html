@@ -15,7 +15,7 @@
         ];
         $(document).ready(function(){
             display();
-            $("addStudent").click(function(){
+            $("addFaculty").click(function(){
                 let name=$("txtName").val();
                 let contact=$("txtCont").val();
                 let imageAdd=$("txtImageAdd").val();
@@ -31,9 +31,47 @@
                 temp+="<td>"+f.name+"</td>";
                 temp+="<td>"+f.conatct+"</td>";
                 temp+="<td><img width='50px' src='"+f.imageAdd+"'/></td>";
-                
-            })
+                temp+="<td><button onclick='deleteFaculty("+f.contact+")'>Delete</button></td>"
+                temp+="</tr>";
+                return temp;
+            });
+            let finalData="<table border=1>"+formatedData.join("")+"</table>";
+            $("#dataDisplay").html(finalData);
+        }
+        function deleteFaculty(cont){
+            const indexToDelete=faculty.findIndex((f)=>{
+                return f.contact==cont
+            });
+            faculty.splice(indexToDelete,1)
+            display();
         }
     </script>
+    <table>
+    <tr>
+      <td>Enter Name</td>
+      <td>:</td>
+      <td><input type="text" id="txtName"/></td>
+    </tr>
+    <tr>
+      <td>Enter Contact</td>
+      <td>:</td>
+      <td><input type="text" id="txtCont"/></td>
+    </tr>
+    <tr>
+      <td>Enter Image Path</td>
+      <td>:</td>
+      <td><input type="text" id="txtImagaeUrl"/></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <input type="button" id="addFaculty" value="Add Student"/>
+      </td>
+    </tr>
+  </table>
+
+  <h1>List of students</h1>
+  <div id="dataDisplay">
+
+  </div>
 </body>
 </html>
