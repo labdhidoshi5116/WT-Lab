@@ -1,11 +1,11 @@
 .Hero{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     /* justify-content: center; */
 }
 .Content{
     border: 3px solid black;
-    width: 300px;
+    /* width: 100px; */
     height: 500px;
     align-items: center;
     justify-content: center;
@@ -15,5 +15,12 @@
     align-items: center;
     justify-content: center;
     height: 100px;
-    width: 500px;
+    /* width: 500px; */
+}
+.Sidebar{
+    border: 3px solid blue;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    /* width: 200px; */
 }

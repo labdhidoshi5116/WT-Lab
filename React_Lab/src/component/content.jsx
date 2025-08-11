@@ -6,6 +6,7 @@ export default function Content() {
       <div className='Hero'>
       <div className="Content">Content</div>
       <div className='Main'>Main Content</div>
+      <div className='Sidebar'>Sidebar</div>
       </div>
     </>
   )
