@@ -48,7 +48,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <nav>
+    <nav> 
       <h2>SmartCare</h2>
       <ul>
         <li><Link to="/">Home</Link></li>
